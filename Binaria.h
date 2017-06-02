@@ -14,14 +14,35 @@ class Binaria{
 
 	public:
 		Binaria();
+		int* getArregloBinario();
 		int* RandomAleatorio();
 		string tostring();
 		//disyuncion, conjuncion, implicacion, double implicacion, disyuncion exclusiva		
-		Binaria* disyuncion(Binaria*);
-		Binaria* conjuncion(Binaria*);
-		Binaria* implicacion(Binaria*);
-		Binaria* dobleimplicacion(Binaria*);
-		Binaria* disyuncionexclu(Binaria*);
+		int* operator+(Binaria* binaria1){
+			int* arreglo = new int[4];
+			for (int i = 0; i < 4; ++i) {
+				if (binaria[i] + binaria1->getArregloBinario()[i] == 0){
+					arreglo[i] = 0;
+				} else if (binaria[i] + binaria1->getArregloBinario()[i] == 1) {
+					arreglo[i] = 1;
+				} else if (binaria[i] + binaria1->getArregloBinario()[i] == 2) {
+					arreglo[i] = 1;
+				} 
+			}
+			return arreglo;
+		}
+		Binaria* operator-(Binaria&){
+
+		}
+		Binaria* operator*(Binaria&){
+
+		}
+		Binaria* operator/(Binaria&){
+
+		}
+		Binaria* operator^(Binaria&){
+
+		}
 
 
 };

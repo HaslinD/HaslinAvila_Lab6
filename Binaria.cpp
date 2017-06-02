@@ -7,6 +7,9 @@ Binaria::Binaria(){
 	binaria = RandomAleatorio();
 }
 
+int* Binaria::getArregloBinario(){
+	return binaria;
+}
 
 int* Binaria::RandomAleatorio(){
     int random;
