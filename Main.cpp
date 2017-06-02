@@ -29,7 +29,7 @@ int main(){
                 while (!salir2){
                     switch(menu2()){
                         case 1:{
-                            int* ArregloNuvo;
+                            int* ArregloNuvo1;
                             cout << "Seleccione de los siguientes arreglos: " << endl;
                             for(int i = 0; i < binarios.size(); i++){
                                 cout << i << " --> " << binarios[i] -> tostring() << endl;
@@ -41,16 +41,17 @@ int main(){
 
 
                             cout << "La Disyuncion es: " << endl;
-                            ArregloNuvo = (*binarios[number] + binarios[number1]);
+                            ArregloNuvo1 = (*binarios[number] + binarios[number1]);
                             for (int i = 0; i < 4; ++i)
                             {
-                                cout << ArregloNuvo[i] << ",";
+                                cout << ArregloNuvo1[i] << ",";
                             }
                             cout << endl;
                             
                             break;}
 
                         case 2:{
+                            int* ArregloNuvo2;
                             cout << "Seleccione de los siguientes arreglos: " << endl;
                             for(int i = 0; i < binarios.size(); i++){
                                 cout << i << " --> " << binarios[i] -> tostring() << endl;
@@ -59,10 +60,19 @@ int main(){
                             cin >> number;
                             cout << "Ingrese el numero del segundo vector deseado: ";
                             cin >> number1;
+
+                            cout << "La Conjuncion es: " << endl;
+                            ArregloNuvo2 = (*binarios[number] - binarios[number1]);
+                            for (int i = 0; i < 4; ++i)
+                            {
+                                cout << ArregloNuvo2[i] << ",";
+                            }
+                            cout << endl;
 
                             break;}
 
                         case 3:{
+                            int* ArregloNuvo3;
                             cout << "Seleccione de los siguientes arreglos: " << endl;
                             for(int i = 0; i < binarios.size(); i++){
                                 cout << i << " --> " << binarios[i] -> tostring() << endl;
@@ -71,10 +81,19 @@ int main(){
                             cin >> number;
                             cout << "Ingrese el numero del segundo vector deseado: ";
                             cin >> number1;
+
+                            cout << "La Implicacion es: " << endl;
+                            ArregloNuvo3 = (*binarios[number] * binarios[number1]);
+                            for (int i = 0; i < 4; ++i)
+                            {
+                                cout << ArregloNuvo3[i] << ",";
+                            }
+                            cout << endl;
 
                             break;}
 
                         case 4:{
+                            int* ArregloNuvo4;
                             cout << "Seleccione de los siguientes arreglos: " << endl;
                             for(int i = 0; i < binarios.size(); i++){
                                 cout << i << " --> " << binarios[i] -> tostring() << endl;
@@ -83,10 +102,19 @@ int main(){
                             cin >> number;
                             cout << "Ingrese el numero del segundo vector deseado: ";
                             cin >> number1;
+
+                            cout << "La doble Implicación es: " << endl;
+                            ArregloNuvo4 = (*binarios[number] / binarios[number1]);
+                            for (int i = 0; i < 4; ++i)
+                            {
+                                cout << ArregloNuvo4[i] << ",";
+                            }
+                            cout << endl;
 
                             break;}
 
                         case 5:{
+                            int* ArregloNuvo5;
                             cout << "Seleccione de los siguientes arreglos: " << endl;
                             for(int i = 0; i < binarios.size(); i++){
                                 cout << i << " --> " << binarios[i] -> tostring() << endl;
@@ -95,6 +123,14 @@ int main(){
                             cin >> number;
                             cout << "Ingrese el numero del segundo vector deseado: ";
                             cin >> number1;
+
+                            cout << "La Disyuncion Exclusiva es: " << endl;
+                            ArregloNuvo5 = (*binarios[number] ^ binarios[number1]);
+                            for (int i = 0; i < 4; ++i)
+                            {
+                                cout << ArregloNuvo5[i] << ",";
+                            }
+                            cout << endl;
 
                             break;}
 
